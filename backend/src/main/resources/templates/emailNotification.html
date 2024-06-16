@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Correo Notificación</title>
+    <style>
+      @media (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          padding: 0 10px !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+    <div class="container" style="margin: 0 auto; width: 40%; max-width: 600px; padding: 0 10px;">
+      <img src="LogoJyH_NoFondo.png" th:src="|cid:${logo}|" style="width: 100px; display: block; margin: 20px auto;" alt="Logo de Jiménez y Hormigo Asesores" />
+      <p style="margin: 30px 0;">¡Hola <span th:text="${name}" style="font-weight: bold;"></span>!</p>
+      <p style="margin: 30px 0;">Tienes una nueva <span style="font-weight: bold; color: #014280">NOTIFICACIÓN</span></p>
+      <p style="margin: 30px 0; font-weight: bold; font-size: 18px;" th:text="${message}">lasd fekoegasnog asdflkwef sdk egikseg</p>
+      <p style="margin: 30px 0;">
+        Saludos cordiales,<br />
+        Jiménez y Hormigo Asesores<br />
+        Para cualquier pregunta <a href="mailto:jimenezyhormigo@economistas.org" style="color: #014280; text-decoration: none;">jimenezyhormigo@economistas.org</a>
+      </p>
+      <hr style="border: none; border-top: 1px solid #eaeaea;" />
+      <footer style="font-size: 12px; text-align: center;">
+        Este email fue enviado de forma automática, por favor no responda. <br />
+        © 2024 Jiménez y Hormigo Asesores
+      </footer>
+    </div>
+  </body>
+</html>
